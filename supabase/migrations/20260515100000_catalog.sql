@@ -28,7 +28,7 @@ CREATE TABLE products (
   is_active             bool DEFAULT true,
   supplier_synced_at    timestamptz,
   ai_tags               text[],
-  ai_embedding          vector(1536),
+  ai_embedding          extensions.vector(1536),
   created_at            timestamptz DEFAULT now(),
   updated_at            timestamptz DEFAULT now()
 );

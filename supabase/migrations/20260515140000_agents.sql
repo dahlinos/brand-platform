@@ -55,7 +55,7 @@ CREATE TABLE personalization_profiles (
   price_sensitivity text DEFAULT 'medium',
   avg_order_qty     numeric DEFAULT 0,
   preferred_methods text[] DEFAULT '{}',
-  embedding         vector(1536),
+  embedding         extensions.vector(1536),
   updated_at        timestamptz DEFAULT now(),
 
   CONSTRAINT pp_segment_check CHECK (
