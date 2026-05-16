@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESIGN TOKENS — [BRAND]
+   Varumärke ej beslutat — använd dessa variabler som platshållare
+   TODO: [OPEN DECISION #2] uppdatera när färgpalett är beslutad
+   ============================================================ */
+
+:root {
+  /* Färgpalett */
+  --brand-primary: #1A1A1A;        /* Platshållare — uppdateras med varumärke */
+  --brand-secondary: #8B7355;      /* Platshållare — varm brun accent */
+  --brand-surface: #FAFAF8;        /* Cream-vit bakgrund */
+  --brand-surface-elevated: #F5F5F2;
+  --brand-text: #1A1A1A;
+  --brand-text-secondary: #6B6B6B;
+  --brand-muted: #9B9B9B;
+  --brand-border: #E5E5E0;
+  --brand-border-strong: #C8C8C2;
+
+  /* Typografi */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', 'Courier New', monospace;
+
+  /* Spacing */
+  --container-max: 1280px;
+  --section-padding: 5rem;
+
+  /* Animationer */
+  --ease-premium: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+}
+
+/* ============================================================
+   GLOBAL RESET & BASE
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--brand-surface);
+  color: var(--brand-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* Display-typografi för rubriker */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h4, h5, h6 {
+  font-family: var(--font-body);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Ordernummer och priser alltid i mono */
+.font-mono,
+[data-price],
+[data-order-number] {
+  font-family: var(--font-mono);
+}
+
+/* ============================================================
+   SCROLLBAR — subtil och premium
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-border-strong);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-muted);
+}
